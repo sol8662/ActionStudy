@@ -1,0 +1,23 @@
+name: CI
+
+on: [push] #event인 push와 같은 issues가 발생되었을 때 아래코드를 실행해라
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest #event가 발생했을 때 실행되는 OS가 우분투이면 좋겠다는 의미
+
+    steps:
+    - name: Run pwd
+      run: pwd
+    - name: Run ls -al
+      run: ls -al
+      
+    #- uses: actions/checkout@v2
+    #- name: Run a one-line script
+    #  run: echo Hello, world!
+    #- name: Run a multi-line script
+    #  run: 
+    #    echo Add other actions to build,
+    #    echo test, and deploy your project.
+    
